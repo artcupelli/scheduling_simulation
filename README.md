@@ -3,7 +3,7 @@
 
   
 
-This repository have some scheduling algorithms implemented with the py-batsim library (Python), intended for simulation once connected to the Batsim simulator.
+This repository has some scheduling algorithms implemented with the py-batsim library (Python), intended for simulation once connected to the Batsim simulator.
 
   
 
@@ -15,7 +15,7 @@ This repository have some scheduling algorithms implemented with the py-batsim l
 
   
 
-First up, check if your environment contains the following:
+First, make sure if your environment contains the following:
   
 
 | Name | My version | Link | Obs |
@@ -30,7 +30,7 @@ First up, check if your environment contains the following:
 
   
 
-To run Batsim, we need to provide the path for two files:
+To run Batsim, we need to provide the paths for two files:
 
   
 
@@ -48,7 +48,7 @@ In this repository we have some platforms and workloads examples. Feel free to u
 
   
 
-We're developing some scheduling algorithms *(in "/algorithms"),* choose one to run your test. Each algorithm folder have already some tests results.
+We're developing some scheduling algorithms *(in "/algorithms"),* choose one to run your test. Each algorithm have already some tests results.
 
   
 

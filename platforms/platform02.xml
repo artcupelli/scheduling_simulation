@@ -1,44 +1,23 @@
 <?xml version='1.0'?>
 <!DOCTYPE platform SYSTEM "http://simgrid.gforge.inria.fr/simgrid/simgrid.dtd">
 
-<!-- 
-        PLATFORM 02 - Only one host (+ master host)
- -->
 
-<platform version="4.1">
+ <platform version="4.1">
 
-    <!-- 
-        HOST MASTER (computes the resource management processes)
-            - core:             1 (core)
-            - speed:            100Mf/s (flops/second)
-            - watts off:        10W (Watts)
-            - watts idle:       100W (Watts)
-            - watts epsilon:    120W (Watts)
-            - watts all cores:  200W (Watts)
-     -->
-     <host id="master_host" speed="100Mf" core="1">
-        <prop id="watt_per_state" value="100.0:120.0:200.0" />
-        <prop id="watt_off" value="10" />
-    </host>
+    <zone id="AS0" routing="Full">
 
-    <!-- 
-        CLUSTER 01 
-            - machines:         100
-            - core:             1 (core)
-            - speed:            100Mf/s (flops/second)
-            - watts off:        10W (Watts)
-            - watts idle:       100W (Watts)
-            - watts epsilon:    120W (Watts)
-            - watts all cores:  200W (Watts)
-            - bandwidth:        125x10^6 (Bytes/second)
-            - latency:          10 (ms)
-     -->
-    <cluster 
-        id="cluter01" speed="100Mf" core="1" prefix="host_" radical="0-99"
-        bw="125e6Bps" lat="10ms" 
-    >
-        <prop id="watt_per_state" value="100.0:120.0:200.0" />
-        <prop id="watt_off" value="10" />
+    <cluster id="my_cluster_1" prefix="a" suffix="" radical="0-5" speed="1Gf" bw="125MBps" lat="50us" bb_bw="2.25GBps" bb_lat="500us"/>
+    
+    <cluster id="my_cluster_2" prefix="master_host" suffix="" radical="0-0" speed="1Gf" bw="125MBps" lat="50us" bb_bw="2.25GBps" bb_lat="500us">
+        <prop id="role" value="master"/>    
     </cluster>
+
+    <link id="backbone" bandwidth="1.25GBps" latency="500us"/>
+
+    <zoneRoute src="my_cluster_1" dst="my_cluster_2" gw_src="amy_cluster_1_router" gw_dst="master_hostmy_cluster_2_router">
+        <link_ctn id="backbone"/>
+    </zoneRoute>
+
+    </zone>
 
 </platform>

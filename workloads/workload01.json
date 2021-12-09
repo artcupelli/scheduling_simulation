@@ -1,0 +1,119 @@
+{
+    "nb_res": 1,
+
+    "jobs": [
+        {
+            "id": "01",
+            "subtime": 0,
+            "walltime": 1000,
+            "res": 1,
+            "profile": "parallel_homogeneous"
+        },
+        {
+            "id": "02",
+            "subtime": 0,
+            "walltime": 300,
+            "res": 1,
+            "profile": "parallel_homogeneous"
+        },
+        {
+            "id": "03",
+            "subtime": 0,
+            "walltime": 800,
+            "res": 1,
+            "profile": "parallel_homogeneous"
+        },
+        {
+            "id": "04",
+            "subtime": 0,
+            "walltime": 1050,
+            "res": 1,
+            "profile": "parallel_homogeneous"
+        },
+        {
+            "id": "05",
+            "subtime": 0,
+            "walltime": 1670,
+            "res": 1,
+            "profile": "parallel_homogeneous"
+        },
+        {
+            "id": "06",
+            "subtime": 0,
+            "walltime": 1201,
+            "res": 1,
+            "profile": "parallel_homogeneous"
+        },
+        {
+            "id": "07",
+            "subtime": 0,
+            "walltime": 1001,
+            "res": 1,
+            "profile": "parallel_homogeneous"
+        },
+        {
+            "id": "08",
+            "subtime": 0,
+            "walltime": 125,
+            "res": 1,
+            "profile": "parallel_homogeneous"
+        },
+        {
+            "id": "10",
+            "subtime": 0,
+            "walltime": 60,
+            "res": 1,
+            "profile": "parallel_homogeneous"
+        },
+        {
+            "id": "11",
+            "subtime": 0,
+            "walltime": 100,
+            "res": 1,
+            "profile": "parallel_homogeneous"
+        },
+        {
+            "id": "12",
+            "subtime": 0,
+            "walltime": 1800,
+            "res": 1,
+            "profile": "parallel_homogeneous"
+        },
+        {
+            "id": "13",
+            "subtime": 0,
+            "walltime": 1200,
+            "res": 1,
+            "profile": "parallel_homogeneous"
+        },
+        {
+            "id": "14",
+            "subtime": 0,
+            "walltime": 1500,
+            "res": 1,
+            "profile": "parallel_homogeneous"
+        },
+        {
+            "id": "15",
+            "subtime": 0,
+            "walltime": 500,
+            "res": 1,
+            "profile": "parallel_homogeneous"
+        },
+        {
+            "id": "16",
+            "subtime": 0,
+            "walltime": 200,
+            "res": 1,
+            "profile": "parallel_homogeneous"
+        }
+    ],
+
+    "profiles": {
+        "parallel_homogeneous": {
+            "type": "parallel_homogeneous",
+            "cpu": 200e6,
+            "com": 0
+        }
+    }
+}

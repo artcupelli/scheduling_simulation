@@ -1,0 +1,44 @@
+<?xml version='1.0'?>
+<!DOCTYPE platform SYSTEM "http://simgrid.gforge.inria.fr/simgrid/simgrid.dtd">
+
+<!-- 
+        PLATFORM 02 - Only one host (+ master host)
+ -->
+
+<platform version="4.1">
+
+    <!-- 
+        HOST MASTER (computes the resource management processes)
+            - core:             1 (core)
+            - speed:            100Mf/s (flops/second)
+            - watts off:        10W (Watts)
+            - watts idle:       100W (Watts)
+            - watts epsilon:    120W (Watts)
+            - watts all cores:  200W (Watts)
+     -->
+     <host id="master_host" speed="100Mf" core="1">
+        <prop id="watt_per_state" value="100.0:120.0:200.0" />
+        <prop id="watt_off" value="10" />
+    </host>
+
+    <!-- 
+        CLUSTER 01 
+            - machines:         100
+            - core:             1 (core)
+            - speed:            100Mf/s (flops/second)
+            - watts off:        10W (Watts)
+            - watts idle:       100W (Watts)
+            - watts epsilon:    120W (Watts)
+            - watts all cores:  200W (Watts)
+            - bandwidth:        125x10^6 (Bytes/second)
+            - latency:          10 (ms)
+     -->
+    <cluster 
+        id="cluter01" speed="100Mf" core="1" prefix="host_" radical="0-99"
+        bw="125e6Bps" lat="10ms" 
+    >
+        <prop id="watt_per_state" value="100.0:120.0:200.0" />
+        <prop id="watt_off" value="10" />
+    </cluster>
+
+</platform>

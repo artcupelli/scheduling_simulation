@@ -1,7 +1,7 @@
 from evalys.jobset import JobSet
 import matplotlib.pyplot as plt
 
-test = "03"
+test = "04"
 
 js = JobSet.from_csv("./test{n}/test{n}_jobs.csv".format(n=test))
 

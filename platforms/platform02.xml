@@ -6,7 +6,7 @@
 
     <zone id="AS0" routing="Full">
 
-    <cluster id="my_cluster_1" prefix="a" suffix="" radical="0-5" speed="1Gf" bw="125MBps" lat="50us" bb_bw="2.25GBps" bb_lat="500us"/>
+    <cluster id="my_cluster_1" prefix="a" suffix="" radical="0-15" speed="1Gf" bw="125MBps" lat="50us" bb_bw="2.25GBps" bb_lat="500us"/>
     
     <cluster id="my_cluster_2" prefix="master_host" suffix="" radical="0-0" speed="1Gf" bw="125MBps" lat="50us" bb_bw="2.25GBps" bb_lat="500us">
         <prop id="role" value="master"/>    
